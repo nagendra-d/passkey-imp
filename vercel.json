@@ -10,12 +10,12 @@
     {
       "src": "/(.*)",
       "dest": "/src/server.js"
-    },
+    }
+  ],
+  "rewrites": [
     {
-      "src": "/\\.well-known/apple-app-site-association",
-      "headers": {
-        "Content-Type": "application/json"
-      }
+      "source": "/.well-known/apple-app-site-association",
+      "destination": "/api/aasa"
     }
   ]
 }
