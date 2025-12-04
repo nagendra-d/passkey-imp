@@ -10,6 +10,12 @@
     {
       "src": "/(.*)",
       "dest": "/src/server.js"
+    },
+    {
+      "src": "/\\.well-known/apple-app-site-association",
+      "headers": {
+        "Content-Type": "application/json"
+      }
     }
   ]
 }
