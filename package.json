@@ -1,0 +1,31 @@
+{
+  "name": "passkey-node",
+  "version": "1.0.0",
+  "description": "Temporary passkey backend API with JSON file storage",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "install-deps": "npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["passkey", "webauthn", "api", "backend"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "@simplewebauthn/server": "^8.3.6",
+    "axios": "^1.6.0",
+    "uuid": "^9.0.1",
+    "joi": "^17.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

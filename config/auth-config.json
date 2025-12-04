@@ -1,0 +1,40 @@
+{
+  "backendApi": {
+    "baseUrl": "https://mobile-auth.grasshopper.com",
+    "endpoints": {
+      "signin": "/token/new"
+    },
+    "timeout": 30000
+  },
+  "userCredentials": {
+    "test_user_android": {
+      "username": "android@example.com",
+      "password": "test_password_123"
+    },
+    "test_user_ios": {
+      "username": "nagedradasari.de@gmail.com",
+      "password": "GHWelcome@7645"
+    },
+    "example_user": {
+      "username": "user@example.com",
+      "password": "your_password_here"
+    },
+    "admin_user": {
+      "username": "admin@example.com",
+      "password": "admin_password_here"
+    }
+  },
+  "webauthn": {
+    "rpName": "Example Corp",
+    "rpID": "nagender.in",
+    "origin": "nagender.in",
+    "timeout": 60000,
+    "allowedOrigins": [
+      "http://localhost:3000",
+      "https://localhost:3000",
+      "https://yourdomain.com",
+      "android:apk-key-hash:REPLACE_WITH_YOUR_ANDROID_APP_SIGNATURE_HASH",
+      "ios:bundle-id:com.grasshopper.dialer"
+    ]
+  }
+}
