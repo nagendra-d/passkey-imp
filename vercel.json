@@ -2,20 +2,22 @@
   "version": 2,
   "builds": [
     {
+      "src": "api/aasa.js",
+      "use": "@vercel/node"
+    },
+    {
       "src": "src/server.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
+      "src": "/\\.well-known/apple-app-site-association",
+      "dest": "api/aasa.js"
+    },
+    {
       "src": "/(.*)",
       "dest": "/src/server.js"
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/.well-known/apple-app-site-association",
-      "destination": "/api/aasa"
     }
   ]
 }
