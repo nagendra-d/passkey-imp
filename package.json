@@ -7,7 +7,9 @@
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "install-deps": "npm install",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "vercel-build": "echo \"Vercel build complete\"",
+    "vercel-dev": "node src/server.js"
   },
   "keywords": ["passkey", "webauthn", "api", "backend"],
   "author": "",
@@ -27,5 +29,10 @@
   },
   "engines": {
     "node": ">=16.0.0"
+  },
+  "vercel": {
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/src/server.js" }
+    ]
   }
 }
