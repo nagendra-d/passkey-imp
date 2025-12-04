@@ -34,7 +34,8 @@
       "https://localhost:3000",
       "https://nagender.in",
       "android:apk-key-hash:REPLACE_WITH_YOUR_ANDROID_APP_SIGNATURE_HASH",
-      "ios:bundle-id:com.grasshopper.dialer"
+      "ios:bundle-id:com.grasshopper.dialer",
+      "ios:bundle-id:com.grasshopper.passkeys"
     ]
   }
 }
