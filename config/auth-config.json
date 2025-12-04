@@ -25,14 +25,14 @@
     }
   },
   "webauthn": {
-    "rpName": "Example Corp",
-    "rpID": "passkey-imp.vercel.app",
-    "origin": "passkey-imp.vercel.app",
+    "rpName": "Nagendra",
+    "rpID": "nagender.in",
+    "origin": "https://nagender.in",
     "timeout": 60000,
     "allowedOrigins": [
       "http://localhost:3000",
       "https://localhost:3000",
-      "https://yourdomain.com",
+      "https://nagender.in",
       "android:apk-key-hash:REPLACE_WITH_YOUR_ANDROID_APP_SIGNATURE_HASH",
       "ios:bundle-id:com.grasshopper.dialer"
     ]
