@@ -26,8 +26,8 @@
   },
   "webauthn": {
     "rpName": "Example Corp",
-    "rpID": "nagender.in",
-    "origin": "nagender.in",
+    "rpID": "passkey-imp.vercel.app",
+    "origin": "passkey-imp.vercel.app",
     "timeout": 60000,
     "allowedOrigins": [
       "http://localhost:3000",
