@@ -51,19 +51,30 @@ app.get('/health', (req, res) => {
 });
 
 // Serve apple-app-site-association file
-/*
-app.get('/.well-known/apple-app-site-association', async (req, res) => {
+app.get('/.well-known/apple-app-site-association', (req, res) => {
   try {
-    const filePath = path.join(__dirname, '../.well-known/apple-app-site-association');
-    const data = await fs.readFile(filePath, 'utf8');
-    res.setHeader('Content-Type', 'application/json');
-    res.send(data);
+    const body = JSON.stringify({
+      webcredentials: {
+        apps: [
+          "KD6L2PTK2Q.com.grasshopper.dialer",
+          "KD6L2PTK2Q.com.grasshopper.passkeys"
+        ]
+      }
+    });
+
+    // Disable Express default headers
+    res.setHeader("Content-Type", "application/json");
+    res.setHeader("Content-Length", Buffer.byteLength(body));
+
+    // IMPORTANT: DO NOT call res.json(), res.send(), res.status()
+    res.write(body);
+    res.end();
   } catch (error) {
-    console.error('Error serving apple-app-site-association:', error);
+    console.error('Error serving AASA:', error);
     res.status(404).send('Not found');
   }
 });
-*/
+
 
 // API Routes
 app.use('/api/passkeys', passkeyRoutes);
