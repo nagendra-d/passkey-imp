@@ -57,6 +57,7 @@ app.get('/.well-known/apple-app-site-association', (req, res) => {
       webcredentials: {
         apps: [
           "KD6L2PTK2Q.com.grasshopper.dialer",
+          "53ZCYLE745.com.grasshopper.dialer",
           "KD6L2PTK2Q.com.grasshopper.passkeys"
         ]
       }
