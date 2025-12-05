@@ -12,12 +12,15 @@
   ],
   "routes": [
     {
-      "src": "/\\.well-known/apple-app-site-association",
-      "dest": "api/aasa.js"
-    },
-    {
       "src": "/(.*)",
       "dest": "/src/server.js"
     }
-  ]
+  ],
+  "headers": [{
+    "source": "/.well-known/apple-app-site-association",
+    "headers": [{
+      "key": "Content-Type",
+      "value": "application/json"
+    }]
+  }]
 }
