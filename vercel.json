@@ -17,7 +17,7 @@
     },
     {
       "src": "/\\.well-known/apple-app-site-association$",
-      "dest": "/api/apple-app-site-association"
+      "dest": "/api/apple-app-site-association.js"
     }
   ]
 }

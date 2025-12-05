@@ -51,6 +51,7 @@ app.get('/health', (req, res) => {
 });
 
 // Serve apple-app-site-association file
+/*
 app.get('/.well-known/apple-app-site-association', async (req, res) => {
   try {
     const filePath = path.join(__dirname, '../.well-known/apple-app-site-association');
@@ -62,6 +63,7 @@ app.get('/.well-known/apple-app-site-association', async (req, res) => {
     res.status(404).send('Not found');
   }
 });
+*/
 
 // API Routes
 app.use('/api/passkeys', passkeyRoutes);
