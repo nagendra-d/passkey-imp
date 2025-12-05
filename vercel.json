@@ -10,11 +10,10 @@
       "use": "@vercel/node"
     }
   ],
-  "headers": [{
-    "source": "/.well-known/apple-app-site-association",
-    "headers": [{
-      "key": "Content-Type",
-      "value": "application/json"
-    }]
-  }]
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/src/server.js"
+    }
+  ]
 }
