@@ -190,7 +190,12 @@ console.log(options);
       }
       expectedOrigin = origin;
     }*/
-
+console.log({
+  response: credential,
+  expectedChallenge: challengeData.challenge,
+  expectedOrigin: expectedOrigin,
+  expectedRPID: this.rpID,
+});
     const verification = await verifyRegistrationResponse({
       response: credential,
       expectedChallenge: challengeData.challenge,
