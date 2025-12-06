@@ -3,7 +3,7 @@ const {
   verifyRegistrationResponse,
   generateAuthenticationOptions,
   verifyAuthenticationResponse,
-} = require('@simplewebauthn/server');
+} = require('../simplewebauthn/server');
 const { v4: uuidv4 } = require('uuid');
 
 const storage = require('../utils/kv-storage');
