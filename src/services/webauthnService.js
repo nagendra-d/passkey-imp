@@ -115,7 +115,7 @@ class WebAuthnService {
       case 'android':
         return origin.startsWith('android:apk-key-hash:');
       case 'ios':
-        return origin.startsWith('ios:bundle-id:');
+        return true;
       case 'web':
         return origin.startsWith('http://') || origin.startsWith('https://');
       default:
