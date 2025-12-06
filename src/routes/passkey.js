@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const webauthnService = require('../services/webauthnService');
-const storage = require('../utils/storage');
+const storage = require('../utils/kv-storage');
 const backendService = require('../services/backendService');
 const { validateRequest, schemas } = require('../middleware/validation');
 

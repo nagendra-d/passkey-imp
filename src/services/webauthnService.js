@@ -6,7 +6,7 @@ const {
 } = require('@simplewebauthn/server');
 const { v4: uuidv4 } = require('uuid');
 
-const storage = require('../utils/storage');
+const storage = require('../utils/kv-storage');
 const backendService = require('./backendService');
 
 class WebAuthnService {
