@@ -188,7 +188,7 @@ console.log(options);
       if (!this.isValidOrigin(origin, platform)) {
         throw new Error(`Invalid origin for ${platform} platform: ${origin}`);
       }
-      expectedOrigin = "nagender.in";
+      expectedOrigin = origin;
     }
 
     const verification = await verifyRegistrationResponse({

@@ -117,7 +117,11 @@ router.post('/register/complete', validateRequest(schemas.registerComplete), asy
     // Detect platform from request
     const userAgent = req.get('User-Agent') || '';
     const detectedPlatform = webauthnService.detectPlatform(userAgent, platform);
-
+console.log(sessionId,
+    credential,
+    userId,
+    requestOrigin,
+    detectedPlatform)
     const result = await webauthnService.verifyRegistration(
       sessionId,
       credential,
