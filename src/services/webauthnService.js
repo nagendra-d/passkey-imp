@@ -3,7 +3,7 @@ const {
   verifyRegistrationResponse,
   generateAuthenticationOptions,
   verifyAuthenticationResponse,
-} = require('../simplewebauthn/server');
+} = require('@simplewebauthn/server');
 const { v4: uuidv4 } = require('uuid');
 
 const storage = require('../utils/kv-storage');
@@ -200,7 +200,7 @@ console.log({
       response: credential,
       expectedChallenge: challengeData.challenge,
       expectedOrigin: expectedOrigin,
-      expectedRPID: ["nagender.in", "https://nagender.in"],
+      expectedRPID: "nagender.in",
     });
 
     if (!verification.verified) {
@@ -321,8 +321,8 @@ console.log({
     const verification = await verifyAuthenticationResponse({
       response: credential,
       expectedChallenge: challengeData.challenge,
-      expectedOrigin: expectedOrigin,
-      expectedRPID: this.rpID,
+      expectedOrigin: "https://nagender.in",
+      expectedRPID: "nagender.in",
       authenticator: {
         credentialID: passkey.credentialID,
         credentialPublicKey: passkey.credentialPublicKey,
