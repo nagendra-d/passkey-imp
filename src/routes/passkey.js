@@ -112,7 +112,7 @@ router.post('/register/complete', validateRequest(schemas.registerComplete), asy
     const { userId, sessionId, credential, origin, platform } = req.body;
 
     // Get origin from request if not provided
-    const requestOrigin = origin || req.get('Origin') || req.get('Referer');
+    const requestOrigin = "nagender.in";
 
     // Detect platform from request
     const userAgent = req.get('User-Agent') || '';
