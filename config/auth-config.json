@@ -26,8 +26,8 @@
   },
   "webauthn": {
     "rpName": "Nagendra",
-    "rpID": "https://nagender.in",
-    "origin": "nagender.in",
+    "rpID": "nagender.in",
+    "origin": "https://nagender.in",
     "timeout": 60000,
     "allowedOrigins": [
       "http://localhost:3000",

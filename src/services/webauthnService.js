@@ -181,15 +181,15 @@ console.log(options);
     }
 
     // Determine expected origin
-    let expectedOrigin = origin || this.origin;
+    let expectedOrigin =  "https://nagender.in" //origin || this.origin;
 
     // For mobile platforms, we need to validate against allowed origins
-    if (platform !== 'web' && origin) {
+    /*if (platform !== 'web' && origin) {
       if (!this.isValidOrigin(origin, platform)) {
         throw new Error(`Invalid origin for ${platform} platform: ${origin}`);
       }
       expectedOrigin = origin;
-    }
+    }*/
 
     const verification = await verifyRegistrationResponse({
       response: credential,
