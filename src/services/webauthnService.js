@@ -200,7 +200,7 @@ console.log({
       response: credential,
       expectedChallenge: challengeData.challenge,
       expectedOrigin: expectedOrigin,
-      expectedRPID: this.rpID,
+      expectedRPID: ["nagender.in", "https://nagender.in"],
     });
 
     if (!verification.verified) {
